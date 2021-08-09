@@ -45,11 +45,25 @@ console.log(totalSales(1, 0, 0)); */
 ////// Problem 03 ///////
 
 /* function deliveryCost(numberOfShirts) {
-  let totalDeliveryCost = 0;
-
   const first100ShirtsDeliveryCost = 100;
   const second100ShirtsDeliveryCost = 80;
-  console;
+  const restOfShirtsDeliveryCost = 50;
   if (numberOfShirts <= 100) {
+    let cost = numberOfShirts * first100ShirtsDeliveryCost;
+    return cost;
   }
-} */
+  else if (numberOfShirts >= 101 && numberOfShirts <= 200) {
+    let costOfFirst100Delivery = 100 * first100ShirtsDeliveryCost;
+    let costOfRestShirts = (numberOfShirts - 100) * second100ShirtsDeliveryCost;
+    let cost = costOfFirst100Delivery + costOfRestShirts;
+    return cost;
+  }
+  else {
+    let costOfFirst100Delivery = 100 * first100ShirtsDeliveryCost;
+    let costOfSecond100Delivery = 100 * second100ShirtsDeliveryCost;
+    let costOfRestShirts = (numberOfShirts - 200) * restOfShirtsDeliveryCost;
+    let cost = costOfFirst100Delivery + costOfSecond100Delivery + costOfRestShirts;
+    return cost;
+  }
+}
+console.log(deliveryCost(220)); */
